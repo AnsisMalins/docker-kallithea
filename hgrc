@@ -1,0 +1,9 @@
+[experimental]
+httppostargs = true
+
+[extensions]
+largefiles =
+
+[largefiles]
+usercache = /srv/kallithea/largefiles
+

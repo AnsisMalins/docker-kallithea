@@ -6,11 +6,12 @@ RUN apt-get update && \
     pip install kallithea==0.7 && \
     kallithea-cli front-end-build && \
     mkdir -p /srv/kallithea/state && \
-    mkdir -p /srv/kallithea/repos
+    mkdir -p /srv/kallithea/repos/.cache/largefiles
 
 COPY start.sh /srv/kallithea/start.sh
+COPY hgrc /etc/mercurial/hgrc
 
-VOLUME ["/srv/kallithea/state", "/srv/kallithea/repos"]
+VOLUME ["/srv/kallithea/state", "/srv/kallithea/repos", "/srv/kallithea/repos/.cache/largefiles"]
 
 EXPOSE 80
 

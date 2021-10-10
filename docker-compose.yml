@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  kallithea:
+    image: kallithea
+    environment:
+      ADMIN_PASSWORD: hurrdurr
+    ports:
+    - 127.0.0.1:5000:80
+    volumes:
+    - state:/srv/kallithea/state
+    - ./repos:/srv/kallithea/repos
+volumes:
+  state:
+

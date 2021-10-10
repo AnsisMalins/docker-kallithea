@@ -1,7 +1,7 @@
 An up to date Kallithea docker container.
 
 * Python version: 3.9
-* Kallithea Version: 0.7
+* Kallithea version: 0.7
 * Mercurial version: 5.8
 
 Don't forget to change ADMIN_PASSWORD.
